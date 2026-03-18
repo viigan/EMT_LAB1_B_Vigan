@@ -6,9 +6,10 @@ import mk.ukim.finki.booking.model.dto.DisplayAccommodationDto;
 import mk.ukim.finki.booking.service.Application.AccommodationApplicationService;
 import mk.ukim.finki.booking.service.Domain.AccommodationService;
 import mk.ukim.finki.booking.service.Domain.HostService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class AccommodationApplicationServiceImpl implements AccommodationApplicationService {
     private  final AccommodationService accommodationService;
     private final HostService hostService;
