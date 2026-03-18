@@ -1,8 +1,8 @@
 package mk.ukim.finki.booking.model.dto;
 
+
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Positive;
-import jakarta.validation.constraints.Size;
 import mk.ukim.finki.booking.model.domain.Accomodation;
 import mk.ukim.finki.booking.model.domain.Host;
 import mk.ukim.finki.booking.model.enums.Category;

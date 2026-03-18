@@ -1,12 +1,13 @@
 package mk.ukim.finki.booking.model.domain;
 
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import mk.ukim.finki.booking.model.enums.Category;
 import mk.ukim.finki.booking.model.enums.Condition;
 
-import javax.persistence.*;
+
 
 @Entity
 @Getter
