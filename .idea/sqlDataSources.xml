@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DdlMappings">
-    <mapping uuid="b243aa79-6eeb-4f4c-9c17-f5545985d14b" name="DDL Mapping">
-      <data-sources db="8584e9a1-e9db-42d9-82a9-e29438ebd8e0" />
+    <mapping uuid="93545bc7-260f-4575-a9ec-8bd5f388ebe4" name="booking@localhost Mapping">
+      <data-sources db="4d7a484f-e554-4655-ae71-fc4c8cf19f2f" ddl="928598ba-c76c-4d97-afd3-995e6772423b" />
       <scope>
-        <node kind="database" qname="postgres" />
+        <node kind="database" negative="1" />
       </scope>
     </mapping>
   </component>

@@ -52,10 +52,11 @@
         </dependency>
 
         <!-- Flyway for DB migrations -->
-        <dependency>
-            <groupId>org.flywaydb</groupId>
-            <artifactId>flyway-core</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.flywaydb</groupId>-->
+<!--            <artifactId>flyway-core</artifactId>-->
+<!--            <version>10.10.0</version> &lt;!&ndash; compatible with Spring Boot 3.3.2 &ndash;&gt;-->
+<!--        </dependency>-->
 
         <!-- OpenAPI / Swagger UI -->
 
@@ -66,6 +67,7 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>

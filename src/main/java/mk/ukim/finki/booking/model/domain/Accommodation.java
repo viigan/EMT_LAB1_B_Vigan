@@ -13,7 +13,7 @@ import mk.ukim.finki.booking.model.enums.Condition;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Accomodation extends BaseAuditableEntity {
+public class Accommodation extends BaseAuditableEntity {
 //    Во рамки на апликацијата се чуваат следните податоци за сместувањата:
 //    id (Long), createdAt (LocalDateTime), updatedAt (LocalDateTime),
 //    name (String), category (enum), host (Host) и numRooms (Integer).
@@ -41,7 +41,7 @@ public class Accomodation extends BaseAuditableEntity {
 
 
 
-    public Accomodation(String name, Category category, Host host, Integer numRooms, Condition condition,Boolean rented) {
+    public Accommodation(String name, Category category, Host host, Integer numRooms, Condition condition, Boolean rented) {
         this.name = name;
         this.category = category;
         this.host = host;
@@ -51,7 +51,7 @@ public class Accomodation extends BaseAuditableEntity {
     }
 
     //this is used when we want to create new accomodation!
-    public Accomodation(String name, Category category, Host host, Integer numRooms, Condition condition) {
+    public Accommodation(String name, Category category, Host host, Integer numRooms, Condition condition) {
         this.name = name;
         this.category = category;
         this.host = host;

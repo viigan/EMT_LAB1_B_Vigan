@@ -1,6 +1,6 @@
 package mk.ukim.finki.booking.model.dto;
 
-import mk.ukim.finki.booking.model.domain.Accomodation;
+import mk.ukim.finki.booking.model.domain.Accommodation;
 import mk.ukim.finki.booking.model.enums.Condition;
 import mk.ukim.finki.booking.model.enums.Category;
 import java.util.List;
@@ -14,7 +14,7 @@ public record DisplayAccommodationDto(
         Integer numRooms,
         Boolean rented
 ) {
-    public static DisplayAccommodationDto from(Accomodation accommodation) {
+    public static DisplayAccommodationDto from(Accommodation accommodation) {
         return new DisplayAccommodationDto(
                 accommodation.getId(),
                 accommodation.getName(),
@@ -26,7 +26,7 @@ public record DisplayAccommodationDto(
         );
     }
 
-    public static List<DisplayAccommodationDto> from(List<Accomodation> accommodations) {
+    public static List<DisplayAccommodationDto> from(List<Accommodation> accommodations) {
         return accommodations.stream().map(DisplayAccommodationDto::from).toList();
     }
 }

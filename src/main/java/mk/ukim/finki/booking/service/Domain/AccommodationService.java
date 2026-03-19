@@ -1,22 +1,22 @@
 package mk.ukim.finki.booking.service.Domain;
 
 
-import mk.ukim.finki.booking.model.domain.Accomodation;
+import mk.ukim.finki.booking.model.domain.Accommodation;
 
 import java.util.List;
 
 public interface AccommodationService {
-    List<Accomodation> findAll();
+    List<Accommodation> findAll();
 
-    List<Accomodation> findAllByRented(Boolean rented);
+    List<Accommodation> findAllByRented(Boolean rented);
 
-    Accomodation findById(Long id);
+    Accommodation findById(Long id);
 
-    Accomodation create(Accomodation accommodation);
+    Accommodation create(Accommodation accommodation);
 
-    Accomodation update(Long id, Accomodation accommodation);
+    Accommodation update(Long id, Accommodation accommodation);
 
-    Accomodation delete(Long id);
+    Accommodation delete(Long id);
 
-    Accomodation rent(Long id);
+    Accommodation rent(Long id);
 }

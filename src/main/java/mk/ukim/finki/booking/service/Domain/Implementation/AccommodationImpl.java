@@ -1,6 +1,6 @@
 package mk.ukim.finki.booking.service.Domain.Implementation;
 
-import mk.ukim.finki.booking.model.domain.Accomodation;
+import mk.ukim.finki.booking.model.domain.Accommodation;
 import mk.ukim.finki.booking.model.exception.AccommodationNotAvailableException;
 import mk.ukim.finki.booking.model.exception.AccomodationNotFoundException;
 import mk.ukim.finki.booking.repository.AccommodationRepository;
@@ -18,28 +18,28 @@ public class AccommodationImpl implements AccommodationService {
     }
 
     @Override
-    public List<Accomodation> findAll() {
+    public List<Accommodation> findAll() {
         return this.accommodationRepository.findAll();
     }
 
     @Override
-    public List<Accomodation> findAllByRented(Boolean rented) {
+    public List<Accommodation> findAllByRented(Boolean rented) {
         return this.accommodationRepository.findAccomodationsByRented(rented);
     }
 
     @Override
-    public Accomodation findById(Long id) {
+    public Accommodation findById(Long id) {
         return this.accommodationRepository.findById(id).orElseThrow(()->new AccomodationNotFoundException(id));
     }
 
     @Override
-    public Accomodation create(Accomodation accommodation) {
+    public Accommodation create(Accommodation accommodation) {
         return this.accommodationRepository.save(accommodation);
     }
 
     @Override
-    public Accomodation update(Long id, Accomodation accommodation) {
-        Accomodation newAcc =  this.accommodationRepository.findById(id).orElseThrow(()->new AccomodationNotFoundException(id));
+    public Accommodation update(Long id, Accommodation accommodation) {
+        Accommodation newAcc =  this.accommodationRepository.findById(id).orElseThrow(()->new AccomodationNotFoundException(id));
 
         newAcc.setCategory(accommodation.getCategory());
         newAcc.setHost(accommodation.getHost());
@@ -51,15 +51,15 @@ public class AccommodationImpl implements AccommodationService {
     }
 
     @Override
-    public Accomodation delete(Long id) {
-        Accomodation aa =  this.accommodationRepository.findById(id).orElseThrow(()->new AccomodationNotFoundException(id));
+    public Accommodation delete(Long id) {
+        Accommodation aa =  this.accommodationRepository.findById(id).orElseThrow(()->new AccomodationNotFoundException(id));
           this.accommodationRepository.delete(aa);
           return aa;
     }
 
     @Override
-    public Accomodation rent(Long id) {
-        Accomodation a = this.accommodationRepository.findById(id).orElseThrow( ()->new AccomodationNotFoundException(id));
+    public Accommodation rent(Long id) {
+        Accommodation a = this.accommodationRepository.findById(id).orElseThrow( ()->new AccomodationNotFoundException(id));
         if(a.getRented()){
             throw new AccommodationNotAvailableException(id);
         }
